@@ -1,25 +1,49 @@
-﻿/*Console.Clear();
-Console.WriteLine("Введите числа");
+﻿
+///////////////////////////////////////////// Задача номер 4
+/*
+Console.Clear();
+Console.WriteLine("Введите 3 числа");
 int a = int.Parse(Console.ReadLine());
 int b = int.Parse(Console.ReadLine());
-if(a*a == b)
+int c = int.Parse(Console.ReadLine());
+int max = a;
+if (a>=b && a>=c){
+    Console.WriteLine($"{max}");
+    }
+else if (b>=a && b>=c){
+    max = b; Console.WriteLine($"{max}");
+    }
+else if(c>=a && c>=b)
 {
-    Console.WriteLine("квадрат числа а раверн числу b");
-}
-else
-{
-    Console.WriteLine("квадрат числа а не равен числу b");
-}
+    max = c; 
+    Console.WriteLine($"{max}");
+    }
+    else{
+        Console.WriteLine("hi");
+    }
+    */
+
+    ////////////////////////////////////////// Задача номер 5
+/*
+Console.Clear();
+Console.WriteLine("Введите 3 числа");
+int a = int.Parse(Console.ReadLine());
+
+if(a % 2 == 0){Console.WriteLine("четное");}
+else{Console.WriteLine("нечетное");}
 */
 
+
+///////////////////////////////////////////// Задача номер 6
+
+/*
 Console.Clear();
-Console.WriteLine("Введите числа");
-int a = int.Parse(Console.ReadLine());
-if(a==1){Console.WriteLine($"{a} пн");}
-else if(a==2){Console.WriteLine($"{a} вт");}
-else if(a==3){Console.WriteLine($"{a} ср");}
-else if(a==4){Console.WriteLine($"{a} чт");}
-else if(a==5){Console.WriteLine($"{a} пт");}
-else if(a==6){Console.WriteLine($"{a} сб");}
-else if(a==7){Console.WriteLine($"{a} вс");}
-else{Console.WriteLine($"{a}нет такого дня недели");}
+Console.WriteLine("Введите натуральное число");
+int n = int.Parse(Console.ReadLine());
+for(int i = 0; i < n; i++)
+{
+    if(i % 2 == 0){
+        Console.WriteLine($"да, детка {i}- это чётное");
+    }
+}
+*/
