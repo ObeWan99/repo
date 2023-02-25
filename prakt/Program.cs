@@ -55,3 +55,97 @@ int num, rem, sum = 0, temp;
         }
         Console.ReadLine();
         */
+
+       
+       /*
+        Console.Clear();
+        Console.WriteLine($"{mas()}");
+        int[] mas()
+        {
+            Console.WriteLine("Введите размер массива");
+            int size = int.Parse(Console.ReadLine());
+            int[] arr = new int[size];
+           for(int i = 0; i < size; i++)
+           {
+                 arr[i] = new Random().Next(0, 2);
+                 Console.WriteLine($"{arr[i]}");
+           }
+           return arr;
+        }
+        */
+
+
+
+//////////////////////////////////////////////// Задача 25
+
+/*
+    int Rer(int a, int b)
+    {
+
+        int otv = 1;
+        for(int i = 1; i <= b; i++)
+        {
+            otv = otv * a;
+        }
+        return otv;
+    }
+
+bool Prover(int ch1)
+{
+    if(ch1 < 0)
+    {
+        Console.WriteLine("показатель не должен быть меньше 0");
+         return false;
+    }
+    return true;
+}
+
+    Console.Clear();
+    Console.WriteLine("Введите два числа");
+    int ch = int.Parse(Console.ReadLine());
+    int ch1 = int.Parse(Console.ReadLine());
+    Console.WriteLine($"{Prover(ch1)}");
+    Console.WriteLine($"{Rer(ch, ch1)}"); 
+    */
+
+    /////////////////////////////////////////////// Задача 27
+
+    /*
+    int Otv(int ch)
+    {
+        int a = 0;
+        while(ch > 0){
+        a = a + ch % 10;
+        ch = ch / 10;
+        }
+
+        return a;
+    }
+
+    Console.Clear();
+    Console.WriteLine("Введите число");
+    int ch = int.Parse(Console.ReadLine());
+    Console.WriteLine($"{Otv(ch)}");
+    */
+
+    ////////////////////////////////////////// Задача 29
+
+    /*
+    Console.Clear();
+    Console.WriteLine("Введите размер массива");
+    int size = int.Parse(Console.ReadLine());
+    Console.WriteLine($"{Mass(size)}");
+
+    int[] Mass (int size)
+    {
+        int[] arr = new int[size];
+        for(int i = 0; i < size; i++)
+        {
+            arr[i] = new Random().Next(0,100);
+            Console.WriteLine($" вывод {arr[i]}");
+        }
+        return arr;
+    }
+    */
+
+    
