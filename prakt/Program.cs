@@ -130,22 +130,203 @@ bool Prover(int ch1)
 
     ////////////////////////////////////////// Задача 29
 
-    /*
-    Console.Clear();
-    Console.WriteLine("Введите размер массива");
-    int size = int.Parse(Console.ReadLine());
-    Console.WriteLine($"{Mass(size)}");
 
-    int[] Mass (int size)
+
+/*
+   int Mass1 (int[] arr)
+   {
+    int count=0;
+    foreach(int el in arr)
+    {
+       if(el > 10 && el <99){
+        
+        count++;
+       }       
+       
+    }
+    return count;
+   }*/
+
+///////////////////////////////////////////////////////////// Задача 34
+/*
+ int Mass1 (int[] arr)
+    {
+        int count=0;
+        for(int i = 0; i < arr.Length-1; i++)
+        { 
+            if(arr[i]%2==0)
+            {
+                count++;
+            }
+           
+        }
+        return count;
+    }
+    
+
+
+
+    int[] Mass (int size, int ch, int ch1)
     {
         int[] arr = new int[size];
         for(int i = 0; i < size; i++)
-        {
-            arr[i] = new Random().Next(0,100);
-            Console.WriteLine($" вывод {arr[i]}");
+        { 
+            arr[i] = new Random().Next(ch,ch1);
         }
         return arr;
     }
+    
+    int Vvod(string message)
+    {
+        Console.WriteLine(message);
+        string dlina = Console.ReadLine();
+        int a = int.Parse(dlina);
+        return a;
+    }
+
+    void Print(int[] arr)
+    {
+        for(int i = 0; i < arr.Length; i++)
+        {
+        Console.WriteLine($" вывод {arr[i]}");
+        }
+
+    }
+
+    Console.Clear();
+    
+    int size = Vvod("Длина массива");
+    int ch = Vvod("начальный диапазон");
+    int ch1 = Vvod("конченый диапазон");
+    int[] arr = Mass(size, ch, ch1);
+    Mass1 (arr);
+    Console.WriteLine($"{Mass1(arr)}");
+*/
+
+
+    ///////////////////////////////////////////////////// Задача 36
+    /*
+    Console.Clear();
+
+    int Vvod (string lengh)
+    {
+        Console.WriteLine(lengh);
+        string dlina = Console.ReadLine();
+        int a = int.Parse(dlina);
+        return a;
+    }
+
+    int[] Mass (int size, int ch, int ch1)
+    {
+        int[] arr = new int[size];
+        for(int i = 0; i < size; i++)
+        { 
+            arr[i] = new Random().Next(ch,ch1);
+        }
+        return arr;
+    }
+
+    int Mass1 (int[] arr)
+    {
+        int sum = 0;
+        for(int i = 0; i < arr.Length; i+=2)
+        { 
+                sum += arr[i];
+        }
+        return sum;
+    }
+    
+    void Print(int[] arr)
+    {
+        for(int i = 0; i < arr.Length; i++)
+        {
+        Console.WriteLine($" вывод {arr[i]}");
+        }
+
+    }
+
+    int size = Vvod("Длина массива");
+    int ch = Vvod("начальный диапазон");
+    int ch1 = Vvod("конченый диапазон");
+    int[] arr = Mass(size, ch, ch1);
+    Print(arr);
+    Mass1(arr);
+    Console.WriteLine($"{Mass1(arr)}");
     */
 
+
+    ////////////////////////////// Задача 38
+
+  Console.Clear();
+
+    int Vvod (string lengh)
+    {
+        Console.WriteLine(lengh);
+        string dlina = Console.ReadLine();
+        int a = int.Parse(dlina);
+        return a;
+    }
+
+    int[] Mass (int size, int ch, int ch1)
+    {
+        int[] arr = new int[size];
+        for(int i = 0; i < size; i++)
+        { 
+            arr[i] = new Random().Next(ch,ch1);
+        }
+        return arr;
+    }
+
+    // void Mass1 (int[] arr,int min, int max)
+    // {
+        
+    //     for(int i = 0; i < arr.Length; i++)
+    //     { 
+           
+    //             if(max<arr[i+1])
+    //             {
+    //                 max=arr[i+1];
+    //             }
+    //             else if(min > arr[i+1])
+    //             {
+    //                 min = arr[i+1];
+    //             }
+    //     }
+    //    Console.WriteLine($"{max}и {min}");
+    // }
+  
+
+    void Print(int[] arr)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < arr.Length; i++)
+        {
+            Console.Write(arr[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
+    int size = Vvod("Длина массива");
+    int ch = Vvod("начальный диапазон");
+    int ch1 = Vvod("конченый диапазон");
+    int[] arr = Mass(size, ch, ch1);
+
+    Print(arr);
+    //Mass1(arr,ch,ch1);
     
+    double min = Int32.MaxValue;
+    double max = Int32.MinValue;
+    for (int z = 0; z < arr.Length; z++)
+{
+    if (arr[z] > max)
+        {
+            max = arr[z];
+        }
+    if (arr[z] < min)
+        {
+            min = arr[z];
+        }
+}
+Console.WriteLine($"всего {arr.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
