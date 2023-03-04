@@ -256,7 +256,7 @@ bool Prover(int ch1)
 
 
     ////////////////////////////// Задача 38
-
+/*
   Console.Clear();
 
     int Vvod (string lengh)
@@ -330,3 +330,83 @@ bool Prover(int ch1)
 }
 Console.WriteLine($"всего {arr.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
 Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+*/
+
+
+
+///////////////////////////////////////////////// Задача 41
+
+
+/*
+Console.Clear();
+int Vvod(string name)
+{
+    Console.WriteLine(name);
+    string ch = Console.ReadLine();
+    int a  = int.Parse(ch);
+    return a;
+}
+
+int[] mass(int a, int b, int size)
+{
+    
+    int[] arr = new int[size];
+    for(int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = new Random().Next(a,b);
+    }
+    return arr;
+}
+
+int rev(int[] arr)
+{
+    int count = 0;
+    for(int i  = 0; i < arr.Length; i++)
+    {
+        if (arr[i]>0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+   void Print(int[] arr)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < arr.Length; i++)
+        {
+            Console.Write(arr[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
+int ch = Vvod("начальная гроаница");
+int ch1 = Vvod("конечная граница");
+int size = Vvod("размер массива");
+int[] arr = mass(ch,ch1,size);
+Print(arr);
+Console.WriteLine($"{rev(arr)}");
+ */
+
+
+///////////////////////////////////////////  43
+
+
+Console.Write("Введите k1: ");
+var k1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите b1: ");
+var b1 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите k2: ");
+var k2 = Convert.ToDouble(Console.ReadLine());
+Console.Write("Введите b2: ");
+var b2 = Convert.ToDouble(Console.ReadLine());
+ 
+ 
+var x = -(b1 - b2) / (k1 - k2);
+var y = k1 * x + b1;
+ 
+x = Math.Round(x, 3);
+y = Math.Round(y, 3);
+ 
+Console.WriteLine($"Пересечение в точке: ({x};{y})");
